@@ -1,6 +1,6 @@
 {
   "name": "cross-env",
-  "version": "0.0.0-semanticallly-released.0",
+  "version": "0.0.1",
   "description": "Run commands that set environment variables across platforms",
   "main": "src/index.js",
   "bin": {
@@ -8,7 +8,6 @@
   },
   "scripts": {
     "start": "npm run test:watch",
-    "prebuild": "rimraf dist && mkdir dist",
     "build": "cd src && babel index.js -d ../dist && cd ..",
     "commit": "git-cz",
     "eslint": "eslint src/ -c other/src.eslintrc --ignore-path other/src.eslintignore && eslint src/*.test.js",
