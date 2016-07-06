@@ -17,6 +17,7 @@
     "test:watch": "mocha src/*.test.js -w --compilers js:babel/register",
     "test": "istanbul cover -x *.test.js node_modules/mocha/bin/_mocha -- -R spec src/index.test.js --compilers js:babel/register",
     "prepublish": "npm run build",
+    "postinstall": "npm run build",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
