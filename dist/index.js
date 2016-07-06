@@ -42,7 +42,7 @@ function getCommandArgsAndEnvVars(args) {
     var shifted = commandArgs.shift();
     var match = envSetterRegex.exec(shifted);
     if (match) {
-      envVars[match[1]] = (match[3] || match[4] || match[5]).replace(/\$pwd/g, process.cwd());
+      envVars[match[1]] = (match[3] || match[4] || match[5]).replace(/\_pwd/g, process.cwd());
     } else {
       command = shifted;
       break;
